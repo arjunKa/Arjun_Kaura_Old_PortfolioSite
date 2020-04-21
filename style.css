@@ -1,0 +1,109 @@
+body {
+
+background: #AEB6BF;
+text-align: center;
+
+}
+
+html, body { height: 100% }
+
+iframe {
+  outline: none;
+  vertical-align: center;
+  
+  height: 630px;
+  width: 820px;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+#main{
+	width: 1000px;
+	height: 1000px;
+	background: #F2F3F4;
+	margin: 25px auto;
+	border:	soild 20px #34495E;
+	
+}
+
+h1{
+	
+	text-align: center;
+	font-family: "Century Gothic";
+	font-weight: boldest;
+	font-size: 30pt;
+	
+}
+h2{
+	
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 30pt;
+	
+}
+
+hr{
+	
+	height: 200px;	
+	border: solid 20px #34495E;
+}
+
+p{
+	font-family: "Century Gothic";
+	font-size: 16pt;
+	
+	
+	
+}
+
+table{
+	 border-spacing: 50px;
+	border: solid 15px #34495E;
+  border-collapse: collapse;
+  vertical-padding: 2px;
+  horizontal-padding: 20px;
+  text-align:center;
+   
+  background-color: gray;
+  
+  
+}
+
+td {
+  
+  padding: 20px;
+  
+}
+
+th{
+	padding: 25px;
+	
+	
+}
+	
+	
