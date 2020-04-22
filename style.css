@@ -5,6 +5,7 @@ text-align: center;
 
 }
 
+
 html, body { height: 100% }
 
 iframe {
@@ -59,6 +60,7 @@ h1{
 	font-size: 30pt;
 	
 }
+
 h2{
 	
 	text-align: center;
@@ -67,10 +69,18 @@ h2{
 	
 }
 
+h3{
+	
+	
+	font-family: "Century Gothic";
+	font-size: 18pt;
+	
+}
+
 hr{
 	
-	height: 200px;	
-	border: solid 20px #34495E;
+	---height: 20px;	
+	---border: solid 20px #34495E;
 }
 
 p{
