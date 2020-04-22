@@ -1,3 +1,10 @@
+
+@import url(https://fonts.googleapis.com/css2?family=Girassol&family=Manrope:wght@200;300;400;500;523;600;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap);
+
+ @font-face { font-family: Namum Gothic; src: url('NanumGothic-Regualar.tff'); } 
+ @font-face { font-family: Namum Gothic; font-weight: bold; src: url('NanumGothic-Bold.tff');}
+ @font-face { font-family: Namum Gothic; font-weight: extra-bold; src: url('NanumGothic-ExtraBold.tff');}
+ 
 body {
 
 background: #AEB6BF;
@@ -8,8 +15,6 @@ text-align: center;
 
 html, body { height: 100% }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;1,300&family=Nunito:ital,wght@1,300&display=swap');
 
 
 
@@ -50,7 +55,7 @@ li a:hover {
 h1{
 	
 	text-align: center;
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Arial', sans-serif;
 	font-weight: boldest;
 	font-size: 30pt;
 	
@@ -59,7 +64,7 @@ h1{
 h2{
 	
 	text-align: center;
-	font-family: 'Fira Sans Condensed', sans-serif;
+	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 30pt;
 	
 }
@@ -67,7 +72,7 @@ h2{
 h3{
 	
 	
-	font-family: 'Fira Sans Condensed', sans-serif;
+	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 18pt;
 	
 }
@@ -78,11 +83,11 @@ hr{
 	---border: solid 20px #34495E;
 }
 
-p{
-	font-family: 'Fira Sans Condensed', sans-serif;
+  p {
+  
+	font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 400;
 	font-size: 16pt;
-	
-	
 	
 }
 
