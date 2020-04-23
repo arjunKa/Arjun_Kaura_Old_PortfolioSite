@@ -1,10 +1,7 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Girassol&family=Manrope:wght@200;300;400;500;523;600;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap);
 
- @font-face { font-family: Namum Gothic; src: url('NanumGothic-Regualar.tff'); } 
- @font-face { font-family: Namum Gothic; font-weight: bold; src: url('NanumGothic-Bold.tff');}
- @font-face { font-family: Namum Gothic; font-weight: extra-bold; src: url('NanumGothic-ExtraBold.tff');}
- 
+
 body {
 
 background: #AEB6BF;
