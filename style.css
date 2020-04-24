@@ -5,7 +5,7 @@
 
 added import*/
 
-body {
+body,html {
 
 
 background-color: #333;
@@ -13,11 +13,6 @@ text-align: center;
 height: 100%;
 }
 
-
-html{
-	/*test*/
-	
-}
 
 
 
@@ -31,44 +26,62 @@ html{
 	
 }
 
+#para ul,li{
+		font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	color: white;
+	text-align: justify;
+	
+	
+	
+}
+
 
 
 
 #navi {
+	 box-shadow: 5px 6px 8px 6px #2B2B2B;
+	
+	 margin:0px auto;
+    left:0px;
+    right:0px;
 	
 	margin:0 auto;
 	list-style:none;
 	background-color:gray;
 	 position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-
+	  top: 0; /* Position the navbar at the top of the page */
+	  width: 100%; /* Full width */
+	
 	
 }
 
 #navi li {
+	height:28px;
 	float:left;
+	display: inline;
+        line-height: 0px;
+       
 	
 }
 
-#navi div {
-	position:relative;
-	background-color:#333;
-	
-}
+
 
 #navi ul {
   list-style-type: none;
- 
+
  
   
 }
 
 #navi a {
 	
+	
 	display:block;
-	text-align:center;
+	
 	width:150px; /* fixed width */
+	
 	text-decoration:none; 
 	font-family: 'Montserrat', sans-serif;
 }
@@ -79,25 +92,34 @@ html{
 
 
 #aboutMe{
-	padding-top: 50px;
-	padding: 10px;
+	padding:10px;
+	padding-bottom: 40px; 
+	padding top: 20px;
+	max-Height:500px;
+	min-Height:500px;
+	
+	
 	border-color:#575757;
 	background-color:#575757;
 }
 
 #contact{
 	
-	padding-top: 50px;
-	
-	padding: 10px;
+	padding:10px;
+	padding-bottom: 20px; 
+	padding top: 20px;
 	border-color:#575757;
 	background-color:#575757;
 }
 
 #projects{
-	padding-top: 50px;
+	padding:10px;
+	padding-bottom: 60px; 
+	padding top: 20px;
 	
-	padding: 10px;
+
+	
+	
 }
 
 #maint{
@@ -133,7 +155,7 @@ li a {
 
 #main{
 	width: 1000px;
-	height: 3400px;
+	height: 4100px;
 	background: #363636;
 	margin: 25px auto;
 	border:	soild 20px #34495E;
@@ -146,6 +168,7 @@ h1{
 	font-family: 'Arial', sans-serif;
 	font-weight: boldest;
 	color: white;
+	font-size:40pt;
 	
 	
 }
@@ -170,8 +193,9 @@ h3{
 
 hr{
 	
-	---height: 20px;	
-	---border: solid 20px #34495E;
+	height:10px;
+	background-color: #575757;
+	border-color: #575757;
 }
 
   p {
@@ -184,12 +208,22 @@ hr{
 	
 }
 
+span {
+	
+	font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	color: white;
+	text-align: justify;
+	align: left;
+
+}
+
 table{
 	 border-spacing: 50px;
 	border: solid 15px #34495E;
   border-collapse: collapse;
-  vertical-padding: 2px;
-  horizontal-padding: 20px;
+  
   text-align:center;
    
   background-color: gray;

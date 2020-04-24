@@ -31,57 +31,69 @@
 		
 			<div style = "padding-left: 10px; padding-right: 10px; padding-top:10px;">
 			
-			<div id = "aboutMe">	
+				<div id = "aboutMe">	
+				
+				
+					<div id = "maint">	
+					<h1>ABOUT ME</h1>
+					</div>
+					
+					
+					<div id = "para">
+						<h1 style="text-align:left;">Arjun Kaura</h1></style>
+						
+						<p style = "text-align: justify;">
+						
+							<ul>
+							  <li>undergraduate Software Engineering student</li>
+							  <li>Some of the languages I know are Java, C#, C, HTML and JavaScript.</li>
+							  <li>experience in all sorts of application development including game development </li>
+							</ul>
+						
+				
+						
+						
+						</p></style>
+					
+						
+						<span>I am a Software Engineer and </span>
+						<span class="developer bio-typed"></span>
+						
+						
+					
+						
+					</div>
+					
+					
+				</div>
 			
 			
-				<div id = "maint">	
-				<h1>ABOUT ME</h1>
-				</div>
+			
 				
+				<div id = "projects">	
 				
-				<div id = "para">
-					<h1 style="text-align:left;">Arjun Kaura</h1></style>
+					<div id = "maint">	
 					
-					<p style = "text-align: justify;">
+						<h1>PROJECTS</h2>
+					</div>
 					
-					Hello, I am an undergraduate Software Engineering student.
-					I have experence using a multitude of different languages and have been studying programming since high school.
-					Some of the languages I know are Java, C#, C, HTML and JavaScript.
-					I have experience in all sorts of application development including game development and I enjoy making 
-					side projects which you can view on this site.
-					Examples of my experience and knowledge can be seen through other sections of my site.
+					<div id = "para">
 					
-					
-					</p></style>
-				</div>
-				
-				
-				</div>
-				
-					<div id = "projects">	
-				
-				<div id = "maint">	
-				
-					<h1>PROJECTS</h2>
-				</div>
-				
-				<div id = "para">
-				
-				<h3> Github: <a href ="https://github.com/arjunKa/Arjun_Kaura_Projects"style="color: #4F80B2" 
-				target="_blank">Link to github Repository of projects</style></a> </h3>
+					<h3> Github: <a href ="https://github.com/arjunKa/Arjun_Kaura_Projects"style="color: #4F80B2" 
+					target="_blank">Link to github Repository of projects</style></a> </h3>
 
+					
+					<h1 style="text-align:left;">3D Personal Localization (GPS) Software</style></h1>
 				
-				<h1 style="text-align:left;">3D Personal Localization (GPS) Software</style></h1>
-			
-				<p >
-				For my highschool co-op I worked in the VGR (Vision Graphics and Robotics) laboratory at York University. I, and another student, worked with 
-				Professor Michael Jenkin to create a demo for personal localization. Using game development software:
-				Unity and programs such as Sketch Up for 3D modelling, we worked  to build a very early prototype of a
-				of 3-D real time GPS software that can be used by emergency service vehicles to navigate the streets.
-				I also worked on a Virtual Reality capbility for the software with the Oculus Rift.
+					<p >
+						For my highschool co-op I worked in the VGR (Vision Graphics and Robotics) laboratory at York University. I, and another student, worked with 
+						Professor Michael Jenkin to create a demo for personal localization. Using game development software:
+						Unity and programs such as Sketch Up for 3D modelling, we worked  to build a very early prototype of a
+						of 3-D real time GPS software that can be used by emergency service vehicles to navigate the streets.
+						I also worked on a Virtual Reality capbility for the software with the Oculus Rift.
 
-				
-				</p>
+					
+					</p>
 				
 				
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/WexE3r4CIXI" frameborder="0" allow="accelerometer; autoplay;
@@ -206,6 +218,39 @@
 		
 		</div>
 	
+	
+	<script>
+						
+						function myLoop(){
+						setTimeout(function() { 
+						
+						typeWriter();
+						typeWriterReverse();
+						myLoop();
+						
+						}, 3000);
+						
+						
+						}
+						
+						
+						
+						</script>
+						
+						<script src="typed.js"></script>
+						
+						
+						<script>
+						var options = {
+							strings: ["an app developer.", "a gamer.", "a game developer.", "a film Buff.", "I made this site."],
+							typeSpeed: 60,
+							backSpeed: 60,
+							loop: true,
+							loopCount: Infinity
+						};
+
+						var typed = new Typed('.bio-typed', options);
+						</script>
 
 
 
