@@ -16,12 +16,10 @@ height: 100%;
 
 html{
 	scroll-behavior: smooth;
-	
+	height : 50%;
 }
 
-body { height: 100%
 
- }
 
 
 
@@ -80,16 +78,26 @@ body { height: 100%
 }
 
 
-#aboutMe,#projects,#contact{
+#aboutMe{
+	padding-top: 50px;
+	padding: 10px;
+	border-color:#575757;
+	background-color:#575757;
+}
+
+#contact{
 	
+	padding-top: 50px;
 	
+	padding: 10px;
+	border-color:#575757;
+	background-color:#575757;
+}
+
+#projects{
+	padding-top: 50px;
 	
-	text-shadow: 4px 4px #0D0D0D; 
-	letter-spacing: 10px;
-	text-color: white;
-	letter-spacing: 10px;
-	font-size: 25pt;
-	font-weight: boldest;
+	padding: 10px;
 }
 
 #maint{
@@ -124,8 +132,8 @@ li a {
 
 
 #main{
-	width: 1100px;
-	height: 3500px;
+	width: 1000px;
+	height: 3400px;
 	background: #363636;
 	margin: 25px auto;
 	border:	soild 20px #34495E;
