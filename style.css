@@ -1,6 +1,9 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Girassol&family=Manrope:wght@200;300;400;500;523;600;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lilita+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lilita+One&family=Miriam+Libre:wght@400;700&display=swap);
+
 /*
 
 added import*/
@@ -8,15 +11,47 @@ added import*/
 body,html {
 
 
-background-color: #333;
+background-color: white ;
 text-align: center;
 height: 100%;
 }
 
+#rcorners2 {
+	
 
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  vertical-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	color: #73AD21;
+	transition: 0.3s;
+	margin: 0 4px;
+  
+}
 
+#rcorners2:hover{
+	
+   background: #73AD21;
+   color:white;
+   
+ 
+	
+	
+}
 
+#listOfProj {
+display: inline-flex;
+margin: 0 25px;
 
+    
+	
+}
 
 #para{
 	
@@ -30,7 +65,7 @@ height: 100%;
 		font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
-	color: white;
+	color: #8F8F8F ;
 	text-align: justify;
 	
 	
@@ -41,7 +76,7 @@ height: 100%;
 
 
 #navi {
-	 box-shadow: 5px 6px 8px 6px #2B2B2B;
+	 box-shadow: 0 8px 12px rgba(156, 156, 156, 0.7);
 	
 	 margin:0px auto;
     left:0px;
@@ -49,7 +84,7 @@ height: 100%;
 	
 	margin:0 auto;
 	list-style:none;
-	background-color:gray;
+	background-color: white;
 	 position: fixed; /* Set the navbar to fixed position */
 	  top: 0; /* Position the navbar at the top of the page */
 	  width: 100%; /* Full width */
@@ -61,7 +96,7 @@ height: 100%;
 	height:28px;
 	float:left;
 	display: inline;
-        line-height: 0px;
+    line-height: 0px;
        
 	
 }
@@ -84,55 +119,47 @@ height: 100%;
 	
 	text-decoration:none; 
 	font-family: 'Montserrat', sans-serif;
+	color: black;
 }
 
 #navi a:hover {
-  color: #111;
+  color: #B8B8B8 ;
 }
 
 
 #aboutMe{
 	padding:10px;
 	padding-bottom: 40px; 
-	padding top: 20px;
+	padding-top: 40px;
 	max-Height:500px;
 	min-Height:500px;
 	
 	
 	border-color:#575757;
-	background-color:#575757;
+	background-color: white;
 }
+
 
 #contact{
 	
-	padding:10px;
+	
 	padding-bottom: 20px; 
-	padding top: 20px;
+	padding-top: 100px;
 	border-color:#575757;
-	background-color:#575757;
+	background-color: white;
 }
 
 #projects{
 	padding:10px;
 	padding-bottom: 60px; 
-	padding top: 20px;
-	
+	padding-top: 100px;
+	background-color: #faf9ff;
 
 	
 	
 }
 
-#maint{
-	
-	
-	
-	text-shadow: 4px 4px #0D0D0D; 
-	letter-spacing: 10px;
-	text-color: white;
-	letter-spacing: 10px;
-	font-size: 25pt;
-	font-weight: boldest;
-}
+
 
 
  a {
@@ -154,22 +181,39 @@ li a {
 
 
 #main{
-	width: 1000px;
-	height: 4100px;
-	background: #363636;
+	width: 1100px;
+	height: 4400px;
+	background: white ;
 	margin: 25px auto;
-	border:	soild 20px #34495E;
+	
 	
 }
 
 h1{
 	
 	text-align: center;
-	font-family: 'Arial', sans-serif;
-	font-weight: boldest;
-	color: white;
-	font-size:40pt;
+	font-family: 'Miriam Libre', sans-serif;
+	font-weight: 400;
+	color: black;
+	font-size:35pt;
 	
+	
+}
+
+#maint h1{
+	
+	text-align: center;
+	font-family: 'Miriam Libre', sans-serif;
+	font-weight: 700;
+	color: black;
+	font-size:50pt;
+	
+		
+	
+	text-shadow: 4px 4px #8F8F8F ; 
+	letter-spacing: 10px;
+	
+
 	
 }
 
@@ -178,7 +222,8 @@ h2{
 	text-align: center;
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 30pt;
-	color: white;
+	color: #313131;
+	
 	
 }
 
@@ -187,7 +232,7 @@ h3{
 	
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 18pt;
-	color: white;
+	color: #313131;
 	
 }
 
@@ -203,7 +248,7 @@ hr{
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
-	color: white;
+	color: #8F8F8F;
 	text-align: justify;
 	
 }
@@ -213,7 +258,7 @@ span {
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
-	color: white;
+	color: #313131 ;
 	text-align: justify;
 	align: left;
 
