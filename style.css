@@ -1,10 +1,12 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Girassol&family=Manrope:wght@200;300;400;500;523;600;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
 
 
 body {
 
-background: #AEB6BF;
+
+background-color: #333;
 text-align: center;
 
 }
@@ -14,21 +16,78 @@ html, body { height: 100% }
 
 
 
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+#para{
+	
+	 padding-left: 20px; 
+	 padding-right:20px;
+	
+	
 }
 
-li {
-  float: left;
+
+
+
+#navi {
+	width:750px;
+	margin:0 auto;
+	list-style:none;
+	background-color:#333;
+	padding-bottom:20px;
+	
+}
+
+#navi li {
+	float:left;
+	background-color:#333;
+}
+
+#navi div{
+	position:relative;
+	background-color:#333;
+	
+	
+}
+
+#navi ul {
+  list-style-type: none;
+ 
+ 
+  
+}
+
+#navi a {
+	
+	display:block;
+	text-align:center;
+	width:150px; /* fixed width */
+	text-decoration:none; 
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+#maint{
+	
+	
+	
+	text-shadow: 4px 4px #0D0D0D; 
+	letter-spacing: 10px;
+	text-color: white;
+	letter-spacing: 10px;
+	font-size: 25pt;
+	font-weight: boldest;
+}
+
+
+ a {
+	
+	color: #4F80B2;
+	
 }
 
 li a {
-  display: block;
+  display: inline-block;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -41,9 +100,9 @@ li a:hover {
 }
 
 #main{
-	width: 1000px;
+	width: 1200px;
 	height: 1000px;
-	background: #F2F3F4;
+	background: #363636;
 	margin: 25px auto;
 	border:	soild 20px #34495E;
 	
@@ -54,7 +113,8 @@ h1{
 	text-align: center;
 	font-family: 'Arial', sans-serif;
 	font-weight: boldest;
-	font-size: 30pt;
+	color: white;
+	
 	
 }
 
@@ -63,6 +123,7 @@ h2{
 	text-align: center;
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 30pt;
+	color: white;
 	
 }
 
@@ -71,6 +132,7 @@ h3{
 	
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 18pt;
+	color: white;
 	
 }
 
@@ -85,6 +147,7 @@ hr{
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
+	color: white;
 	
 }
 
