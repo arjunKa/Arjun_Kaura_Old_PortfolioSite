@@ -30,23 +30,25 @@ html, body { height: 100% }
 
 
 #navi {
-	width:750px;
+	
 	margin:0 auto;
 	list-style:none;
-	background-color:#333;
-	padding-bottom:20px;
+	background-color:gray;
+	 position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
 	
 }
 
 #navi li {
 	float:left;
-	background-color:#333;
+	
 }
 
-#navi div{
+#navi div {
 	position:relative;
 	background-color:#333;
-	
 	
 }
 
@@ -66,8 +68,22 @@ html, body { height: 100% }
 	font-family: 'Montserrat', sans-serif;
 }
 
+#navi a:hover {
+  color: #111;
+}
 
 
+#aboutMe,#projects,#contact{
+	
+	
+	
+	text-shadow: 4px 4px #0D0D0D; 
+	letter-spacing: 10px;
+	text-color: white;
+	letter-spacing: 10px;
+	font-size: 25pt;
+	font-weight: boldest;
+}
 
 #maint{
 	
@@ -97,13 +113,12 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
+
+
 
 #main{
 	width: 1100px;
-	height: 1000px;
+	height: 3500px;
 	background: #363636;
 	margin: 25px auto;
 	border:	soild 20px #34495E;
