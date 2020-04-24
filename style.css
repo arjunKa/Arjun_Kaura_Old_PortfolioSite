@@ -16,6 +16,12 @@ text-align: center;
 height: 100%;
 }
 
+#DD, #GPS, #zombie{
+	padding-top: 30px;
+	
+	
+}
+
 #rcorners2 {
 	
 
