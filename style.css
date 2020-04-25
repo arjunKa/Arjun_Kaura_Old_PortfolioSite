@@ -26,7 +26,8 @@ height: 100%;
 	
 
   border-radius: 25px;
-  border: 2px solid #73AD21;
+   background: #73AD21;
+   color:white;
   padding: 20px;
   width: 200px;
   height: 150px;
@@ -35,16 +36,68 @@ height: 100%;
   font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
-	color: #73AD21;
+	
 	transition: 0.3s;
-	margin: 0 4px;
+	margin: 0 10px;
+
+}
+
+#rcorners3 {
+	
+
+
+  border-radius: 25px;
+   background: #73AD21;
+   color:white;
+  padding: 7px;
+  width: 110px;
+  text-align: center;
+  vertical-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	
+	transition: 0.3s;
+	margin: 0 7px;
   
 }
 
-#rcorners2:hover{
+#rcorners3 a {
 	
-   background: #73AD21;
-   color:white;
+	color: white;
+	
+}
+
+
+#listOfLinks{
+	
+	display: inline-block;
+
+}
+
+
+#listOfLinks a {
+text-decoration: none;
+
+    
+	
+}
+
+#rcorners3 a {
+text-decoration: none;
+
+    
+	
+}
+
+
+
+#rcorners2:hover, #rcorners3:hover{
+	
+  
+   border: 2px solid #73AD21;
+   background-color:white;
+  color: #73AD21;
    
  
 	
@@ -54,7 +107,9 @@ height: 100%;
 #listOfProj {
 display: inline-flex;
 margin: 0 25px;
+padding-bottom:40px;
 
+	
     
 	
 }
