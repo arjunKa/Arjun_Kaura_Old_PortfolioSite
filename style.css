@@ -16,7 +16,7 @@ text-align: center;
 height: 100%;
 }
 
-#DD, #GPS, #zombie{
+#DD, #GPS, #zombie, #coronaCast{
 	padding-top: 30px;
 	
 	
@@ -316,7 +316,7 @@ hr{
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
-	color: #8F8F8F;
+	color: #727272;
 	text-align: justify;
 	
 }
