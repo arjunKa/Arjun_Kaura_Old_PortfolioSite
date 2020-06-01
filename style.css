@@ -8,12 +8,17 @@
 
 added import*/
 
-body,html {
+body {
 
 
 background-color: white ;
 text-align: center;
 height: 100%;
+}
+html{
+
+	scroll-behavior: smooth;
+
 }
 
 #DD, #GPS, #zombie, #coronaCast{
@@ -328,7 +333,7 @@ span {
 	font-size: 16pt;
 	color: #313131 ;
 	text-align: justify;
-	align: left;
+	
 
 }
 
