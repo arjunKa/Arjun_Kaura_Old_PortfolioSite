@@ -35,9 +35,7 @@ html{
    color:white;
   padding: 20px;
   width: 200px;
-  height: 150px;
-  text-align: center;
-  vertical-align: center;
+  height: 100px;
   font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
@@ -99,20 +97,17 @@ text-decoration: none;
 
 #rcorners2:hover, #rcorners3:hover{
 	
-  
+ 
    border: 2px solid #73AD21;
    background-color:white;
   color: #73AD21;
-   
- 
-	
-	
+
 }
 
 #listOfProj {
 display: inline-flex;
 margin: 0 25px;
-padding-bottom:40px;
+padding-bottom:20px;
 
 	
     
@@ -121,8 +116,8 @@ padding-bottom:40px;
 
 #listOfProj a {
 text-decoration: none;
-
-    
+text-align: center;
+vertical-align: center;
 	
 }
 
