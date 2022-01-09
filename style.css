@@ -1,4 +1,3 @@
-
 @import url(https://fonts.googleapis.com/css2?family=Girassol&family=Manrope:wght@200;300;400;500;523;600;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lilita+One&display=swap);
@@ -9,231 +8,170 @@
 added import*/
 
 body {
-
-
-background-color: white ;
-text-align: center;
-height: 100%;
+  background-color: white;
+  text-align: center;
+  height: 100%;
 }
-html{
-
-	scroll-behavior: smooth;
-
+html {
+  scroll-behavior: smooth;
 }
 
-#DD, #GPS, #zombie, #coronaCast{
-	padding-top: 30px;
-	
-	
+#DD,
+#GPS,
+#zombie,
+#coronaCast {
+  padding-top: 30px;
 }
 
 #rcorners2 {
-	
-
   border-radius: 25px;
-   background: #73AD21;
-   color:white;
+  background: #73ad21;
+  color: white;
   padding: 20px;
   width: 200px;
   height: 100px;
-  font-family: 'Nanum Gothic', sans-serif;
-	font-weight: 400;
-	font-size: 16pt;
-	
-	transition: 0.3s;
-	margin: 0 10px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
 
+  transition: 0.3s;
+  margin: 0 10px;
+  border: 1px solid #73ad21;
 }
 
 #rcorners3 {
-	
-
-
   border-radius: 25px;
-   background: #73AD21;
-   color:white;
+  background: #73ad21;
+  color: white;
   padding: 7px;
   width: 110px;
   text-align: center;
   vertical-align: center;
-  font-family: 'Nanum Gothic', sans-serif;
-	font-weight: 400;
-	font-size: 16pt;
-	
-	transition: 0.3s;
-	margin: 0 7px;
-  
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
+
+  transition: 0.3s;
+  margin: 0 7px;
+  border: 1px solid #73ad21;
 }
 
 #rcorners3 a {
-	
-	color: white;
-	
+  color: white;
 }
 
-
-#listOfLinks{
-	
-	display: inline-block;
-
+#listOfLinks {
+  display: inline-block;
 }
-
 
 #listOfLinks a {
-text-decoration: none;
-
-    
-	
+  text-decoration: none;
 }
 
 #rcorners3 a {
-text-decoration: none;
-
-    
-	
+  text-decoration: none;
 }
 
-
-
-#rcorners2:hover, #rcorners3:hover{
-	
- 
-   border: 2px solid #73AD21;
-   background-color:white;
-  color: #73AD21;
-
+#rcorners2:hover,
+#rcorners3:hover {
+  border: 1px solid #73ad21;
+  background-color: white;
+  color: #73ad21;
 }
 
 #listOfProj {
-display: inline-flex;
-margin: 0 25px;
-padding-bottom:20px;
-
-	
-    
-	
+  display: inline-flex;
+  margin: 0 25px;
+  padding-bottom: 20px;
 }
 
 #listOfProj a {
-text-decoration: none;
-text-align: center;
-vertical-align: center;
-	
+  text-decoration: none;
+  text-align: center;
+  vertical-align: center;
 }
 
-#para{
-	
-	 padding-left: 20px; 
-	 padding-right:20px;
-	
-	
+#para {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-#para ul,li{
-		font-family: 'Nanum Gothic', sans-serif;
-	font-weight: 400;
-	font-size: 16pt;
-	color: #8F8F8F ;
-	text-align: justify;
-	
-	
-	
+#para ul,
+li {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
+  color: #8f8f8f;
+  text-align: justify;
 }
-
-
-
 
 #navi {
-	 box-shadow: 0 8px 12px rgba(156, 156, 156, 0.7);
-	
-	 margin:0px auto;
-    left:0px;
-    right:0px;
-	
-	margin:0 auto;
-	list-style:none;
-	background-color: white;
-	 position: fixed; /* Set the navbar to fixed position */
-	  top: 0; /* Position the navbar at the top of the page */
-	  width: 100%; /* Full width */
-	
-	
+  box-shadow: 0 8px 12px rgba(156, 156, 156, 0.7);
+
+  margin: 0px auto;
+  left: 0px;
+  right: 0px;
+
+  margin: 0 auto;
+  list-style: none;
+  background-color: white;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
 
 #navi li {
-	height:28px;
-	float:left;
-	display: inline;
-    line-height: 0px;
-       
-	
+  height: 28px;
+  float: left;
+  display: inline;
+  line-height: 0px;
 }
-
-
 
 #navi ul {
   list-style-type: none;
-
- 
-  
 }
 
 #navi a {
-	
-	
-	display:block;
-	
-	width:150px; /* fixed width */
-	
-	text-decoration:none; 
-	font-family: 'Montserrat', sans-serif;
-	color: black;
+  display: block;
+
+  width: 150px; /* fixed width */
+
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 #navi a:hover {
-  color: #B8B8B8 ;
+  color: #b8b8b8;
 }
 
+#aboutMe {
+  padding: 10px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  max-height: 500px;
+  min-height: 500px;
 
-#aboutMe{
-	padding:10px;
-	padding-bottom: 40px; 
-	padding-top: 40px;
-	max-Height:500px;
-	min-Height:500px;
-	
-	
-	border-color:#575757;
-	background-color: white;
+  border-color: #575757;
+  background-color: white;
 }
 
-
-#contact{
-	
-	
-	padding-bottom: 20px; 
-	padding-top: 100px;
-	border-color:#575757;
-	background-color: white;
+#contact {
+  padding-bottom: 20px;
+  padding-top: 100px;
+  border-color: #575757;
+  background-color: white;
 }
 
-#projects{
-	padding:10px;
-	padding-bottom: 60px; 
-	padding-top: 100px;
-	background-color: #faf9ff;
-
-	
-	
+#projects {
+  padding: 10px;
+  padding-bottom: 60px;
+  padding-top: 100px;
+  background-color: #faf9ff;
 }
 
-
-
-
- a {
-	
-	color: #4F80B2;
-	
+a {
+  color: #4f80b2;
 }
 
 li a {
@@ -246,114 +184,81 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 
-
-
-#main{
-	width: 1100px;
-	height: 4400px;
-	background: white ;
-	margin: 25px auto;
-	
-	
+#main {
+  width: 1100px;
+  height: 4400px;
+  background: white;
+  margin: 25px auto;
 }
 
-h1{
-	
-	text-align: center;
-	font-family: 'Miriam Libre', sans-serif;
-	font-weight: 400;
-	color: black;
-	font-size:35pt;
-	
-	
+h1 {
+  text-align: center;
+  font-family: "Miriam Libre", sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 35pt;
 }
 
-#maint h1{
-	
-	text-align: center;
-	font-family: 'Miriam Libre', sans-serif;
-	font-weight: 700;
-	color: black;
-	font-size:50pt;
-	
-		
-	
-	text-shadow: 4px 4px #8F8F8F ; 
-	letter-spacing: 10px;
-	
+#maint h1 {
+  text-align: center;
+  font-family: "Miriam Libre", sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 50pt;
 
-	
+  text-shadow: 4px 4px #8f8f8f;
+  letter-spacing: 10px;
 }
 
-h2{
-	
-	text-align: center;
-	font-family: 'Nanum Gothic', sans-serif;
-	font-size: 30pt;
-	color: #313131;
-	
-	
+h2 {
+  text-align: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 30pt;
+  color: #313131;
 }
 
-h3{
-	
-	
-	font-family: 'Nanum Gothic', sans-serif;
-	font-size: 18pt;
-	color: #313131;
-	
+h3 {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 18pt;
+  color: #313131;
 }
 
-hr{
-	
-	height:10px;
-	background-color: #575757;
-	border-color: #575757;
+hr {
+  height: 10px;
+  background-color: #575757;
+  border-color: #575757;
 }
 
-  p {
-  
-	font-family: 'Nanum Gothic', sans-serif;
-	font-weight: 400;
-	font-size: 16pt;
-	color: #727272;
-	text-align: justify;
-	
+p {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
+  color: #727272;
+  text-align: justify;
 }
 
 span {
-	
-	font-family: 'Nanum Gothic', sans-serif;
-	font-weight: 400;
-	font-size: 16pt;
-	color: #313131 ;
-	text-align: justify;
-	
-
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
+  color: #313131;
+  text-align: justify;
 }
 
-table{
-	 border-spacing: 50px;
-	border: solid 15px #34495E;
+table {
+  border-spacing: 50px;
+  border: solid 15px #34495e;
   border-collapse: collapse;
-  
-  text-align:center;
-   
+
+  text-align: center;
+
   background-color: gray;
-  
-  
 }
 
 td {
-  
   padding: 20px;
-  
 }
 
-th{
-	padding: 25px;
-	
-	
+th {
+  padding: 25px;
 }
-	
-	
