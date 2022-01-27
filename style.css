@@ -11,6 +11,7 @@ body {
   background-color: white;
   text-align: center;
   height: 100%;
+  margin: 0;
 }
 html {
   scroll-behavior: smooth;
@@ -28,15 +29,16 @@ html {
   background: #73ad21;
   color: white;
   padding: 20px;
-  width: 200px;
-  height: 100px;
+  width: 170px;
+  height: 80px;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
   font-size: 16pt;
-
+  vertical-align: middle;
   transition: 0.3s;
   margin: 0 10px;
   border: 1px solid #73ad21;
+  text-align: center;
 }
 
 #rcorners3 {
@@ -81,8 +83,10 @@ html {
 
 #listOfProj {
   display: inline-flex;
-  margin: 0 25px;
+  margin: 0 -10px;
   padding-bottom: 20px;
+  align-items: center;
+  vertical-align: middle;
 }
 
 #listOfProj a {
@@ -147,6 +151,8 @@ li {
 
 #aboutMe {
   padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 40px;
   padding-top: 40px;
   max-height: 500px;
@@ -165,8 +171,10 @@ li {
 
 #projects {
   padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
   padding-bottom: 60px;
-  padding-top: 100px;
+  padding-top: 30px;
   background-color: #faf9ff;
 }
 
@@ -232,7 +240,7 @@ hr {
 p {
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
-  font-size: 16pt;
+  font-size: 15pt;
   color: #727272;
   text-align: justify;
 }
