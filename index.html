@@ -25,12 +25,13 @@
 	
 	<script>
 	window.onload = function() {
+		var darkmode = false;
 		if(getCookie("style_sheet")!=""){
 			document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
-			if(getCookie("style_sheet")="style.css")
-				darkmode=false;
-			else
-				darkmode=true;
+			// if(getCookie("style_sheet")="style.css")
+			// 	darkmode=false;
+			// else
+			// 	darkmode=true;
     	}
 	};
 
@@ -321,11 +322,13 @@
 
 <script>
 	
-	var darkmode;
+	
 	var sheet = "";
 	function myFunction() {
 		//document.getElementById("aboutMe").p.innerHTML += getCookie("style_sheet") +"test";
-		if (!darkmode){
+
+		//if it is light rn
+		if (document.getElementById("pagestyle").getAttribute("href")=="style.css"){
 
 		sheet = "dark-style.css";
 		document.getElementById("pagestyle").setAttribute("href", "dark-style.css");
