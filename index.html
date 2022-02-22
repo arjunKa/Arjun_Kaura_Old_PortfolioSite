@@ -340,7 +340,8 @@
 
 		if(getCookie("style_sheet")!=""){
 			document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
-
+		}else{
+		setCookie("style_sheet","style.css",30);
     	}
 	};
 
