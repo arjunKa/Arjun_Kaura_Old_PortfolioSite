@@ -18,7 +18,7 @@
 
 </head>
 
-<link href="style.css" type="text/css" rel="stylesheet">
+<link id = "pagestyle" href="style.css" type="text/css" rel="stylesheet">
 
 <body>
 <div id = "navi">
@@ -26,11 +26,14 @@
 	<ul>
 	<li><a href="#aboutMe">About Me</a></li>
 	<li><a href="#projects">Projects</a></li>
+	<li><a href="#interactive">Interactive</a></li>
+	<li class = "right-navi"><a onclick="myFunction()" >Dark Mode</a></li>
 <!--	<li><a href="#contact">Contact</a></li> -->	
 	</ul>
 
-
 </div>
+
+
 	
 		<div id="main">
 				<div id = "aboutMe">	
@@ -214,7 +217,7 @@
 				<h1 style="text-align:left;">Detective Dom</style></h1>
 				</div>
 				
-				<p style = "left-padding: 10px; right-padding:10px;">
+				<p>
 				You play as Detective Dom and must investigate a series of cases through the use of interrogation,
 				clue-finding and looking for correlations during your investigation.
 				This demo demonstrates an LA Noire style interrogation system, where you question suspects for a case. You collect evidence,
@@ -269,7 +272,7 @@
 	</body>
 	
 	
-	<script>
+					<script>
 						
 						function myLoop(){
 						setTimeout(function() { 
@@ -282,15 +285,13 @@
 						
 						
 						}
+
+					</script>
+						
+					<script src="typed.js"></script>
 						
 						
-						
-						</script>
-						
-						<script src="typed.js"></script>
-						
-						
-						<script>
+					<script>
 						var options = {
 							strings: ["an app developer.", "a web developer.", "a game developer.", "a gamer.", "I made this site."],
 							typeSpeed: 60,
@@ -300,7 +301,51 @@
 						};
 
 						var typed = new Typed('.bio-typed', options);
-						</script>
+					</script>
+
+<script>
+	var darkmode=false;
+	function myFunction() {
+		if (!darkmode){
+		 	//dark mode
+		// 	document.getElementById("aboutMe").style = `
+		// 	background:#575757; 
+		// 	color:white;
+		// 	`;
+		// 	document.getElementById("projects").style = `
+		// 	background:#313131; 
+		// 	color:white;
+		// 	`;
+		// 	document.body.style=`
+		// 	background: black;
+		// 	color:white;
+		// 	`;
+		document.getElementById("pagestyle").setAttribute("href", "dark-style.css");
+		//swapStyleSheet("dark-style.css");
+		}else{
+		 	//light mode
+		// 	document.styleSheets[0].disabled = false;
+		// 	document.getElementById("aboutMe").style = `
+		// 	background:white; 
+		// 	color:black;
+		// 	`;
+		// 	document.getElementById("projects").style = `
+		// 	background-color: #faf9ff;
+		// 	color:white;
+		// 	`;
+		// 	document.body.style=`
+		// 	background: white;
+			
+		// 	`;
+		//swapStyleSheet("style.css");
+		document.getElementById("pagestyle").setAttribute("href", "style.css");
+		}
+
+	darkmode=!darkmode;
+	}
+
+</script>
+
 
 
 
