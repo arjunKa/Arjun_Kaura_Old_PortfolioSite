@@ -24,6 +24,10 @@ html {
   padding-top: 30px;
 }
 
+.dark-mode-button {
+  background-color: white;
+}
+
 #rcorners2 {
   border-radius: 25px;
   background: #73ad21;
