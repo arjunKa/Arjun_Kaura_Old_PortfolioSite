@@ -303,45 +303,38 @@
 						var typed = new Typed('.bio-typed', options);
 					</script>
 
+<script src="cookieCode.js"></script>
+
+<Script>
+
+window.onload = function() {
+	// if(getCookie("style_sheet")!= null)
+	// document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
+};
+
+</Script>
+
+
 <script>
+	
 	var darkmode=false;
+	var sheet = "";
 	function myFunction() {
+		//document.getElementById("aboutMe").p.innerHTML += getCookie("style_sheet") +"test";
 		if (!darkmode){
-		 	//dark mode
-		// 	document.getElementById("aboutMe").style = `
-		// 	background:#575757; 
-		// 	color:white;
-		// 	`;
-		// 	document.getElementById("projects").style = `
-		// 	background:#313131; 
-		// 	color:white;
-		// 	`;
-		// 	document.body.style=`
-		// 	background: black;
-		// 	color:white;
-		// 	`;
+
+		sheet = "dark-style.css";
 		document.getElementById("pagestyle").setAttribute("href", "dark-style.css");
-		//swapStyleSheet("dark-style.css");
+		
+
 		}else{
-		 	//light mode
-		// 	document.styleSheets[0].disabled = false;
-		// 	document.getElementById("aboutMe").style = `
-		// 	background:white; 
-		// 	color:black;
-		// 	`;
-		// 	document.getElementById("projects").style = `
-		// 	background-color: #faf9ff;
-		// 	color:white;
-		// 	`;
-		// 	document.body.style=`
-		// 	background: white;
-			
-		// 	`;
-		//swapStyleSheet("style.css");
+
+		sheet = "style.css";
 		document.getElementById("pagestyle").setAttribute("href", "style.css");
 		}
 
 	darkmode=!darkmode;
+	setCookie("style_sheet",sheet,30);
 	}
 
 </script>
