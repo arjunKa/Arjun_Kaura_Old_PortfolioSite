@@ -24,26 +24,14 @@
 
 	<script src="cookieCode.js"></script>
 
-	<script>
-		window.onload = function() {
-	
-			if(getCookie("style_sheet")!=""){
-				document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
-				if(document.getElementById("pagestyle").getAttribute("href")=="dark-style.css")
-					document.getElementById("drkMode").textContent="Light Mode";
-			}else{
-			setCookie("style_sheet","style.css",30);
-			}
-		};
-	
-		</script>
+	<script src = "OnLoad.js"></script>
 
 <div id = "navi">
 
 	<ul>
 	<li><a href="#aboutMe">About Me</a></li>
 	<li><a href="#projects">Projects</a></li>
-	<!-- <li><a href="#interactive">Interactive</a></li> -->
+	<li><a href="interactive.html">Interactive</a></li>
 	<li class = "right-navi"><button onclick="myFunction()" class = "dark-mode-button"><span id = "drkMode">Dark Mode</span></button></li>
 <!--	<li><a href="#contact">Contact</a></li> -->	
 	</ul>
@@ -321,32 +309,7 @@
 					</script>
 
 
-<script>
-	
-	
-	var sheet = "";
-	function myFunction() {
-		//document.getElementById("aboutMe").p.innerHTML += getCookie("style_sheet") +"test";
-
-		//if it is light rn
-		if (document.getElementById("pagestyle").getAttribute("href")=="style.css"){
-
-		sheet = "dark-style.css";
-		document.getElementById("pagestyle").setAttribute("href", "dark-style.css");
-		document.getElementById("drkMode").textContent="Light Mode";
-
-		}else{
-
-		sheet = "style.css";
-		document.getElementById("pagestyle").setAttribute("href", "style.css");
-		document.getElementById("drkMode").textContent="Dark Mode";
-		}
-
-	
-	setCookie("style_sheet",sheet,30);
-	}
-
-</script>
+<script src= "SwitchDarkMode.js"> </script>
 
 	
 </html>
