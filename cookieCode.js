@@ -1,3 +1,10 @@
+
+window.onload = function() {
+    if(getCookie("style_sheet")!=""){
+    document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
+    }
+};
+
 function getCookie(name) {
     var cname = name + "=";
     var decodedCookie = decodeURIComponent(document.cookie);

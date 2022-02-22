@@ -21,6 +21,9 @@
 <link id = "pagestyle" href="style.css" type="text/css" rel="stylesheet">
 
 <body>
+
+	<script src="cookieCode.js"></script>
+
 <div id = "navi">
 
 	<ul>
@@ -302,18 +305,6 @@
 
 						var typed = new Typed('.bio-typed', options);
 					</script>
-
-<script src="cookieCode.js"></script>
-
-<Script type="module">
-
-window.onload = function() {
-	 if(getCookie("style_sheet")!=""){
-	 document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
-	 }
-};
-
-</Script>
 
 
 <script>
