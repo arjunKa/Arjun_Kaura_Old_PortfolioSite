@@ -22,17 +22,7 @@
 
 <body>
 
-	
-	<script>
-	window.onload = function() {
 
-		if(getCookie("style_sheet")!=""){
-			document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
-
-    	}
-	};
-
-	</script>
 
 <div id = "navi">
 
@@ -344,6 +334,17 @@
 </script>
 
 <script src="cookieCode.js"></script>
+
+<script>
+	window.onload = function() {
+
+		if(getCookie("style_sheet")!=""){
+			document.getElementById("pagestyle").setAttribute("href", getCookie("style_sheet"));
+
+    	}
+	};
+
+	</script>
 
 
 	
