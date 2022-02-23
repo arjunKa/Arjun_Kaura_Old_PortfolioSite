@@ -1,4 +1,4 @@
-<!DOCTYPE Html:5>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -9,30 +9,137 @@
 
 </head>
 
-<link id = "pagestyle" href="style.css" type="text/css" rel="stylesheet">
+<link id="pagestyle" href="styles/style.css" type="text/css" rel="stylesheet">
 
-<body> 
+<body>
 
-    <script src="cookieCode.js"></script>
-    <script src = "OnLoad.js"></script>
-	<script src="SwitchDarkMode.js"></script>
+    <script src="scripts/cookieCode.js"></script>
+    <script src="scripts/OnLoad.js"></script>
+    <script src="scripts/SwitchDarkMode.js"></script>
+    <script src="scripts/BetterWordle.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
 
 
-<div id = "navi">
+    <div id="navi">
 
-	<ul>
-	<li><a href="index.html#aboutMe">About Me</a></li>
-	<li><a href="index.html#projects">Projects</a></li>
-	<li><a href="interactive.html">Interactive</a></li>
-	<li class = "right-navi"><button onclick="myFunction()" class = "dark-mode-button"><span id = "drkMode">Dark Mode</span></button></li>
-<!--	<li><a href="#contact">Contact</a></li> -->	
-	</ul>
+        <ul>
+            <li><a href="index.html#aboutMe">About Me</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="interactive.html">Interactive</a></li>
+            <li class="right-navi"><button onclick="myFunction()" class="dark-mode-button"><span id="drkMode">Dark
+                        Mode</span></button></li>
+            <!--	<li><a href="#contact">Contact</a></li> -->
+        </ul>
 
-</div>
+    </div>
 
+    <div class=main>
+        <table>
+            <tr id="1st">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr id="2nd">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr id="3rd">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr id="4th">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr id="5th">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr id="6th">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="pasteHere">
+        <p id="fileTextHere">text from files/text.txt</p>
+    </div>
+
+
+    <script>
+        $("#fileTextHere").load("wordle-answers.txt");
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
 </body>
 
+<style>
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background-color: black;
+        padding-top: 30px;
+    }
 
-<HTml:5>
+    /* body{
+        padding-top: 100px;
+        background-color: black;
+    } */
+
+    table {
+        color: rgb(233, 233, 233);
+        background-color: rgb(65, 65, 65);
+        margin: auto;
+        vertical-align: auto;
+        width: 75%;
+        height: 50%;
+        font-size: 20pt;
+    }
+
+    th,
+    tr {
+        padding: 30px;
+        margin: auto;
+
+    }
+
+    .main {
+
+        text-align: center;
+        margin: auto;
+        min-height: 50%;
+        max-height: auto;
+        width: fit-content;
+        border: 3px solid green;
+        padding: 10px;
+
+    }
+</style>
+
+
+
+</html>
