@@ -6,5 +6,6 @@ window.onload = function () {
             document.getElementById("drkMode").textContent = "Light Mode";
     } else {
         setCookie("style_sheet", "styles/style.css", 30);
+        document.getElementById("drkMode").textContent = "Dark Mode";
     }
 };
