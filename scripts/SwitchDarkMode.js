@@ -17,5 +17,5 @@ function myFunction() {
 	}
 
 
-	setCookie("style_sheet", "styles/" + sheet, 30);
+	setCookie("style_sheet", "styles/" + sheet, 0.1);
 }
