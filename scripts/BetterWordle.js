@@ -3,6 +3,58 @@
 var indexRow = 0;
 var indexCol = -1;
 
+var itemLength = $('#wordle *').length;
+$('#container *').css("height", (100 / itemLength) + "%");
+
+function keyboardCheck(keyInput) {
+
+    if (/^[a-zA-Z]*$/g.test(keyInput)) {
+
+        if (indexCol < 4) {
+
+            indexCol++;
+            document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
+                getElementsByTagName("th")[indexCol].innerHTML = keyInput;
+
+        }
+
+    } else if (keyInput == 8 || keyInput == 46) {//delete
+
+        if (indexCol > -1) {
+
+            document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
+                getElementsByTagName("th")[indexCol].innerHTML = "";
+            indexCol--;
+
+        }
+
+    } else if (keyInput == 13) {//enter
+
+        if (indexCol == 4 && arr_of_words.includes(getFullWord())) {
+            //&& arr_of_words.includes(getFullWord())
+            checkWord();
+            indexRow++;
+            indexCol = -1;
+
+        } else {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+
+            //("#popUp").show();
+            setTimeout(function () {
+                (popup.classList.toggle("hide"))
+            }, 1990);
+
+            console.log("Not in word list.");
+
+        }
+
+    }
+
+
+}
+
+
 document.addEventListener('keydown', function (e) {
     var keynum;
 
@@ -12,7 +64,6 @@ document.addEventListener('keydown', function (e) {
         keynum = e.which;
     }
     //alert(keynum+' was pressed');
-
 
 
     if (/^[a-zA-Z]*$/g.test(String.fromCharCode(keynum))) {

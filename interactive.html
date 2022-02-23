@@ -93,7 +93,39 @@
                 Type letters with your keyboard.</p>
         </div>
 
+        <div id="keyboard">
+            <button type="button" onclick="keyboardCheck('Q');">Q</button>
+            <button type="button" onclick="keyboardCheck('W');">W</button>
+            <button type="button" onclick="keyboardCheck('E');">E</button>
+            <button type="button" onclick="keyboardCheck('R');">R</button>
+            <button type="button" onclick="keyboardCheck('T');">T</button>
+            <button type="button" onclick="keyboardCheck('Y');">Y</button>
+            <button type="button" onclick="keyboardCheck('U');">U</button>
+            <button type="button" onclick="keyboardCheck('I');">I</button>
+            <button type="button" onclick="keyboardCheck('O');">O</button>
+            <button type="button" onclick="keyboardCheck('P');">P</button><br>
+            <button type="button" onclick="keyboardCheck('A');">A</button>
+            <button type="button" onclick="keyboardCheck('S');">S</button>
+            <button type="button" onclick="keyboardCheck('D');">D</button>
+            <button type="button" onclick="keyboardCheck('F');">F</button>
+            <button type="button" onclick="keyboardCheck('G');">G</button>
+            <button type="button" onclick="keyboardCheck('H');">H</button>
+            <button type="button" onclick="keyboardCheck('J');">J</button>
+            <button type="button" onclick="keyboardCheck('K');">K</button>
+            <button type="button" onclick="keyboardCheck('L');">L</button><br>
+            <button type="button" style="width:60px;" onclick="keyboardCheck('13');">ENTER</button>
+            <button type="button" onclick="keyboardCheck('Z');">Z</button>
+            <button type="button" onclick="keyboardCheck('X');">X</button>
+            <button type="button" onclick="keyboardCheck('C');">C</button>
+            <button type="button" onclick="keyboardCheck('V');">V</button>
+            <button type="button" onclick="keyboardCheck('B');">B</button>
+            <button type="button" onclick="keyboardCheck('N');">N</button>
+            <button type="button" onclick="keyboardCheck('M');">M</button>
+            <button type="button" style="width:60px;" onclick="keyboardCheck('8');">DEL</button>
+        </div>
+
     </div>
+
 
     <!-- <script>
         $("#fileTextHere").load("wordle-answers.txt");
@@ -105,13 +137,20 @@
 </body>
 
 <style>
-    html,
+    html {
+        /* height: 100%; */
+
+    }
+
     body {
         margin: 0;
-        height: 100%;
-        overflow: hidden;
+
+        /* overflow: hidden; */
         background-color: rgb(212, 212, 212);
         margin-top: 30px;
+        padding: 0;
+        /* Prevent scrollbar appearing on page transition */
+        overflow-y: hidden;
     }
 
     /* body{
@@ -119,11 +158,14 @@
         background-color: black;
     } */
 
+    /* #wordle {
+        min-height: 1em;
+
+    } */
+
     table {
         color: rgb(233, 233, 233);
         background-color: rgb(65, 65, 65);
-
-
         font-size: 20pt;
         border-radius: 25px;
         border: 15px solid rgb(41, 41, 41);
@@ -164,16 +206,61 @@
 
     }
 
+    #wordle {
+
+        /* margin: 0 auto; */
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+    }
 
     .main {
 
         text-align: center;
         margin: auto;
+        vertical-align: top;
 
+        /* 
         width: fit-content;
-        height: fit-content;
+        height: fit-content; */
         border: 3px solid green;
         padding: 0px;
+
+    }
+
+    #keyboard {
+        justify-content: center;
+
+        align-items: flex-start;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+
+
+    }
+
+    #keyboard button {
+
+        height: 60px;
+        text-align: center;
+        width: 50px;
+        font-family: 'Arial Bold', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        /* font-size: 1vb; */
+        margin-left: 1px;
+        margin-left: 1px;
+        margin-top: 3px;
 
     }
 
