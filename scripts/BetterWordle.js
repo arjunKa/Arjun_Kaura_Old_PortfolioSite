@@ -37,11 +37,22 @@ document.addEventListener('keydown', function (e) {
 
     } else if (keynum == 13) {
 
-        if (indexCol == 4) {
+        if (indexCol == 4 && arr_of_words.includes(getFullWord())) {
             //&& arr_of_words.includes(getFullWord())
             checkWord();
             indexRow++;
             indexCol = -1;
+
+        } else {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+
+            //("#popUp").show();
+            setTimeout(function () {
+                (popup.classList.toggle("hide"))
+            }, 1990);
+
+            console.log("Not in word list.");
 
         }
 
@@ -59,7 +70,7 @@ function launch() {
 
     var obj;
 
-    fetch('./wordle-answers.txt') // fetch text file
+    fetch('./sgb-words.txt') // fetch text file
         .then((resp) => resp.text())
         .then(data => obj = data.split("\n"))
         .then(() => chooseWord(obj))
@@ -87,14 +98,14 @@ function chooseWord(arr) {
 
 }
 
-var map1 = new Map();
+const map1 = new Map();
 var map2;
 
 
 
 function checkWord() {
 
-    map2 = map1;
+    map2 = new Map(map1);
     var user_answer = "";
     var your_char;
     var ans_char;
@@ -117,7 +128,8 @@ function checkWord() {
             document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
                 getElementsByTagName("th")[i].style.backgroundColor = "green";
             map2.set(your_char, map2.get(your_char) - 1);
-
+            console.log("ansCh: " + map2.get(your_char));
+            console.log("ansCh: " + map1.get(your_char));
         }
     }
 

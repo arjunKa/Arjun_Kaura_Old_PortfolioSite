@@ -14,7 +14,7 @@
 <body>
 
     <script src="scripts/cookieCode.js"></script>
-    <script src="scripts/OnLoad.js"></script>
+    <!-- <script src="scripts/OnLoad.js"></script> -->
     <script src="scripts/SwitchDarkMode.js"></script>
     <script src="scripts/BetterWordle.js"></script>
 
@@ -26,65 +26,74 @@
             <li><a href="index.html#aboutMe">About Me</a></li>
             <li><a href="index.html#projects">Projects</a></li>
             <li><a href="interactive.html">Interactive</a></li>
-            <li class="right-navi"><button onclick="myFunction()" class="dark-mode-button"><span id="drkMode">Light
-                        Mode</span></button></li>
+            <!-- <li class="right-navi"><button onclick="myFunction()" class="dark-mode-button"><span id="drkMode">Light
+                        Mode</span></button></li> -->
             <!--	<li><a href="#contact">Contact</a></li> -->
         </ul>
 
     </div>
 
-    <div class=main>
-        <table>
-            <tr id="1st">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr id="2nd">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr id="3rd">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr id="4th">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr id="5th">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr id="6th">
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </table>
+    <div id="wordle">
+        <h1>Custom Wordle</h1>
+
+        <div class="main" id="main-board">
+            <div class="popup">
+                <span class="popuptext" id="myPopup">Not in word list.</span>
+            </div>
+
+            <table>
+                <tr id="1st">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr id="2nd">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr id="3rd">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr id="4th">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr id="5th">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr id="6th">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+
+        </div>
+
+        <div>
+            <p id="fileTextHere" style="margin-left: 30px;">
+                Type letters with your keyboard.</p>
+        </div>
 
     </div>
-
-    <div class="pasteHere">
-        <p id="fileTextHere">text from files/text.txt</p>
-    </div>
-
 
     <!-- <script>
         $("#fileTextHere").load("wordle-answers.txt");
@@ -101,8 +110,8 @@
         margin: 0;
         height: 100%;
         overflow: hidden;
-        background-color: black;
-        padding-top: 30px;
+        background-color: rgb(212, 212, 212);
+        margin-top: 30px;
     }
 
     /* body{
@@ -113,12 +122,11 @@
     table {
         color: rgb(233, 233, 233);
         background-color: rgb(65, 65, 65);
-        margin: auto;
-        vertical-align: auto;
-        width: 75%;
-        height: 50%;
+
+
         font-size: 20pt;
         border-radius: 25px;
+        border: 15px solid rgb(41, 41, 41);
     }
 
     th,
@@ -128,27 +136,146 @@
 
     }
 
+
+
+    /* @keyframes example {
+        from {
+            background-color: gray;
+        }
+
+        to {
+            background-color: green;
+        }
+    } */
+
     th {
         padding: 0px;
         border: 5px solid black;
         border-radius: 25px;
-        height: 50px;
-        width: 50px;
+        height: 70px;
+        width: 70px;
         min-width: 50px;
         min-height: 50px;
+        font-family: "Arial", sans-serif;
+        font-weight: 600;
+        font-size: 28pt;
+        /* animation-name: example;
+        animation-duration: 2s; */
 
     }
+
 
     .main {
 
         text-align: center;
         margin: auto;
-        min-height: 50%;
-        max-height: auto;
-        width: fit-content;
-        border: 3px solid green;
-        padding: 10px;
 
+        width: fit-content;
+        height: fit-content;
+        border: 3px solid green;
+        padding: 0px;
+
+    }
+
+    /* Popup container - can be anything you want */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 2s;
+    }
+
+    .popup .hide {
+        visibility: initial;
+        display: none;
+        /* -webkit-animation: fadeOut 1s;
+        animation: fadeOut 1s; */
+
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    @-webkit-keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
     }
 </style>
 
