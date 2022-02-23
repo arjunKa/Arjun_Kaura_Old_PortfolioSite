@@ -3,8 +3,7 @@
 var indexRow = 0;
 var indexCol = -1;
 
-var itemLength = $('#wordle *').length;
-$('#container *').css("height", (100 / itemLength) + "%");
+
 
 function keyboardCheck(keyInput) {
 
@@ -31,7 +30,7 @@ function keyboardCheck(keyInput) {
     } else if (keyInput == 13) {//enter
 
         if (indexCol == 4 && arr_of_words.includes(getFullWord())) {
-            //&& arr_of_words.includes(getFullWord())
+
             checkWord();
             indexRow++;
             indexCol = -1;
@@ -76,6 +75,7 @@ document.addEventListener('keydown', function (e) {
 
         }
 
+        //backspace is pressed
     } else if (keynum == 8 || keynum == 46) {
 
         if (indexCol > -1) {
