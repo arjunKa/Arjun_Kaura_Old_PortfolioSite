@@ -128,8 +128,8 @@ function checkWord() {
             document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
                 getElementsByTagName("th")[i].style.backgroundColor = "green";
             map2.set(your_char, map2.get(your_char) - 1);
-            console.log("ansCh: " + map2.get(your_char));
-            console.log("ansCh: " + map1.get(your_char));
+            //console.log("ansCh: " + map2.get(your_char));
+            //console.log("ansCh: " + map1.get(your_char));
         }
     }
 
@@ -139,12 +139,13 @@ function checkWord() {
         your_char = user_answer.charAt(i);
 
         ans_char = word.charAt(i);
-        //console.log(your_char + " map: " + map1.get(your_char));
+        console.log(your_char + " map: " + map1.get(your_char));
         if (your_char != ans_char && word.includes(your_char) && map2.get(your_char) > 0) {
 
             document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
                 getElementsByTagName("th")[i].style.backgroundColor = "yellow";
             map2.set(your_char, map2.get(your_char) - 1);
+            console.log(your_char + " map: " + map2.get(your_char));
         }
     }
     //console.log("user: " + user_answer);
