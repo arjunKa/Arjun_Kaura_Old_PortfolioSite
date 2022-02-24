@@ -224,7 +224,7 @@ var modal;
 function modalForWin() {
     gameEnd = true;
     modal = document.getElementById("myModal");
-    document.getElementById("modal-text").innerText += "You won!\nThe word was " + word + ".";
+    document.getElementById("modal-text").innerText = "You won!\nThe word was " + word + ".";
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "block";
     span.onclick = function () {
