@@ -337,3 +337,7 @@ th {
 .show {
   display: block;
 }
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
