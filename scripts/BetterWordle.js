@@ -224,7 +224,7 @@ var modal;
 function modalForWin() {
     gameEnd = true;
     modal = document.getElementById("myModal");
-    document.getElementById("modal-text").innerText += "\nThe word was " + word + ".";
+    document.getElementById("modal-text").innerText += "You won!\nThe word was " + word + ".";
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "block";
     span.onclick = function () {
@@ -245,10 +245,27 @@ function modalForLoss() {
     }
 
 }
-
+modal = document.getElementById("myModal");
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+function modalForIntro() {
+
+    modal = document.getElementById("myModal");
+    document.getElementById("modal-text").innerText = "Guess the WORDLE in six tries." +
+        "\n\nAfter each guess, the color of the tiles will change to show how close your guess was to the word.\n" +
+        "\nGREEN means the letter is in the word and in correct spot." +
+        "\nORANGE means the letter is in the word but in wrong spot.\nGRAY means the letter is not in any spot."
+        ;
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+
 }
 

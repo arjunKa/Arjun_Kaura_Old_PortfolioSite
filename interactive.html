@@ -11,7 +11,7 @@
 
 <link id="pagestyle" href="styles/style.css" type="text/css" rel="stylesheet">
 
-<body>
+<body onload="modalForIntro()">
 
     <script src="scripts/cookieCode.js"></script>
     <!-- <script src="scripts/OnLoad.js"></script> -->
@@ -97,11 +97,6 @@
 
         </div>
 
-        <div>
-            <p id="fileTextHere" style="margin-left: 30px;">
-                Type letters with your keyboard.</p>
-        </div>
-
         <div id="keyboard" class="disable-dbl-tap-zoom">
             <button type="button" onclick="keyboardCheck('Q');">Q</button>
             <button type="button" onclick="keyboardCheck('W');">W</button>
@@ -145,10 +140,18 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p id="modal-text">Nice! You found the word!</p>
+            <p id="modal-text" class="modal-txt">Nice! You found the word!</p>
         </div>
 
     </div>
+    <script>
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
 
 </body>
 
@@ -416,14 +419,26 @@
         margin: auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%;
+        width: 50%;
+        height: 50%;
+
+    }
+
+    .modal-txt {
+
+        color: #535353;
+
+        font-size: 18pt;
+        font-weight: bold;
+        margin: auto;
+
     }
 
     /* The Close Button */
     .close {
-        color: #aaaaaa;
+        color: #535353;
         float: right;
-        font-size: 28px;
+        font-size: 40px;
         font-weight: bold;
     }
 
