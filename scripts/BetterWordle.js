@@ -51,15 +51,14 @@ function keyboardCheck(keyInput) {
 
                     modalForWin();
 
+                } else if (indexRow + 1 > 5 && getFullWord() != word) {
+                    gameEnd = true;
+                    modalForLoss();
                 }
 
                 checkWord();
                 indexRow++;
                 indexCol = -1;
-                if (indexRow > 5 && getFullWord() != word) {
-                    gameEnd = true;
-                    modalForLoss();
-                }
 
 
             } else {
