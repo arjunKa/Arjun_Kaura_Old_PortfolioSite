@@ -56,7 +56,7 @@ function keyboardCheck(keyInput) {
                 checkWord();
                 indexRow++;
                 indexCol = -1;
-                if (indexRow > 5) {
+                if (indexRow > 5 && getFullWord() != word) {
                     gameEnd = true;
                     modalForLoss();
                 }
