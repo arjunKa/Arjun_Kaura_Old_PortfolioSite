@@ -266,6 +266,10 @@ function modalForIntro() {
         modal.style.display = "none";
     }
 
+    window.onload = function () {
+        modalForIntro();
+
+    }
 
 }
 
