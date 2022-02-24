@@ -126,11 +126,15 @@ function chooseWord(arr) {
     setCookie("wordle_answer", + arr[index], 0.1);
 
     for (let i = 0; i < 5; i++) {
-        if (map1.has(arr[i])) {
+        if (map1.has(word.charAt(i))) {
             map1.set(word.charAt(i), map1.get(word.charAt(i)) + 1);
         } else {
             map1.set(word.charAt(i), 1);
         }
+    }
+
+    for (let [key, value] of map1) {
+        console.log(key + " = " + value);
     }
 
 }
