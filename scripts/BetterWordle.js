@@ -105,10 +105,16 @@ function launch() {
 
     var obj;
 
-    fetch('./sgb-words.txt') // fetch text file
+
+    fetch('./words-txt.txt') // fetch text file
         .then((resp) => resp.text())
         .then(data => obj = data.split("\n"))
         .then(() => chooseWord(obj))
+
+    fetch('./sgb-words.txt') // fetch text file
+        .then((resp) => resp.text())
+        .then(data => obj = data.split("\n"))
+        .then(() => setWordList(obj))
 
 }
 var arr_of_words;
@@ -130,6 +136,12 @@ function chooseWord(arr) {
 
         }
     }
+
+}
+
+function setWordList(arr) {
+
+    arr_of_words = arr;
 
 }
 
