@@ -106,12 +106,12 @@ function launch() {
     var obj;
 
 
-    fetch('./words-txt.txt') // fetch text file
+    fetch('./wordle-answers.txt') // fetch text file
         .then((resp) => resp.text())
         .then(data => obj = data.split("\n"))
         .then(() => chooseWord(obj))
 
-    fetch('./sgb-words.txt') // fetch text file
+    fetch('./word-list.txt') // fetch text file
         .then((resp) => resp.text())
         .then(data => obj = data.split("\n"))
         .then(() => setWordList(obj))
@@ -123,7 +123,7 @@ function chooseWord(arr) {
     var index = Math.floor(Math.random() * arr.length);
     console.log(arr[index]);
     word = arr[index];
-    arr_of_words = arr;
+    // arr_of_words = arr;
     setCookie("wordle_answer", + arr[index], 0.1);
 
     for (let i = 0; i < 5; i++) {
@@ -131,9 +131,6 @@ function chooseWord(arr) {
             map1.set(word.charAt(i), map1.get(word.charAt(i)) + 1);
         } else {
             map1.set(word.charAt(i), 1);
-            //console.log(word.charAt(i) + ", " + map1.get(word.charAt(i)));
-
-
         }
     }
 
