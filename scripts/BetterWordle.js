@@ -197,6 +197,8 @@ function checkWord() {
             console.log(your_char + " map: " + map2.get(your_char));
         } else if (!word.includes(your_char)) {
             getElementByTextContent(your_char).style.backgroundColor = "gray"
+            document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
+                getElementsByTagName("th")[i].style.backgroundColor = "rgb(20, 20, 20)";
 
         }
     }
