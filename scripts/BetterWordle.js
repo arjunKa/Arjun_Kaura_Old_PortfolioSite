@@ -2,55 +2,83 @@
 
 var indexRow = 0;
 var indexCol = -1;
+var gameEnd = false;
 
-
+function getElementByTextContent(text) {
+    var spanList = document.getElementsByTagName("button");
+    console.log("find button");
+    for (var i = 0, len = spanList.length; i < len; i++) {
+        if (spanList[i].textContent.toLowerCase() == text.toLowerCase()) // use .innerHTML if you need IE compatibility
+            return spanList[i]
+    }
+}
 
 function keyboardCheck(keyInput) {
 
-    if (/^[a-zA-Z]*$/g.test(keyInput)) {
+    if (!gameEnd) {
 
-        if (indexCol < 4) {
+        if (typeof keyInput == "string") {
+            keyInput = keyInput.charCodeAt(0);
+            console.log(keyInput);
+        }
 
-            indexCol++;
-            document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
-                getElementsByTagName("th")[indexCol].innerHTML = keyInput;
+        if (/^[a-zA-Z]*$/g.test(String.fromCharCode(keyInput))) {
+
+            if (indexCol < 4) {
+
+                indexCol++;
+                document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
+                    getElementsByTagName("th")[indexCol].innerHTML = String.fromCharCode(keyInput);
+
+            }
+
+        } else if (keyInput == 8 || keyInput == 46) {//delete
+
+            if (indexCol > -1) {
+
+                document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
+                    getElementsByTagName("th")[indexCol].innerHTML = "";
+                indexCol--;
+
+            }
+
+        } else if (keyInput == 13) {//enter
+
+            if (indexCol == 4 && arr_of_words.includes(getFullWord())) {
+
+                if (getFullWord() == word) {
+
+
+                    modalForWin();
+
+                }
+
+                checkWord();
+                indexRow++;
+                indexCol = -1;
+                if (indexRow > 5) {
+                    gameEnd = true;
+                    modalForLoss();
+                }
+
+
+            } else {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+
+                //("#popUp").show();
+                setTimeout(function () {
+                    (popup.classList.toggle("hide"))
+                }, 1990);
+
+                console.log("Not in word list.");
+
+            }
 
         }
 
-    } else if (keyInput == 8 || keyInput == 46) {//delete
-
-        if (indexCol > -1) {
-
-            document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
-                getElementsByTagName("th")[indexCol].innerHTML = "";
-            indexCol--;
-
-        }
-
-    } else if (keyInput == 13) {//enter
-
-        if (indexCol == 4 && arr_of_words.includes(getFullWord())) {
-
-            checkWord();
-            indexRow++;
-            indexCol = -1;
-
-        } else {
-            var popup = document.getElementById("myPopup");
-            popup.classList.toggle("show");
-
-            //("#popUp").show();
-            setTimeout(function () {
-                (popup.classList.toggle("hide"))
-            }, 1990);
-
-            console.log("Not in word list.");
-
-        }
 
     }
-
-
 }
 
 
@@ -62,52 +90,8 @@ document.addEventListener('keydown', function (e) {
     } else if (e.which) { // Netscape/Firefox/Opera                 
         keynum = e.which;
     }
-    //alert(keynum+' was pressed');
 
-
-    if (/^[a-zA-Z]*$/g.test(String.fromCharCode(keynum))) {
-
-        if (indexCol < 4) {
-
-            indexCol++;
-            document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
-                getElementsByTagName("th")[indexCol].innerHTML = String.fromCharCode(keynum);
-
-        }
-
-        //backspace is pressed
-    } else if (keynum == 8 || keynum == 46) {
-
-        if (indexCol > -1) {
-
-            document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
-                getElementsByTagName("th")[indexCol].innerHTML = "";
-            indexCol--;
-
-        }
-
-    } else if (keynum == 13) {
-
-        if (indexCol == 4 && arr_of_words.includes(getFullWord())) {
-            //&& arr_of_words.includes(getFullWord())
-            checkWord();
-            indexRow++;
-            indexCol = -1;
-
-        } else {
-            var popup = document.getElementById("myPopup");
-            popup.classList.toggle("show");
-
-            //("#popUp").show();
-            setTimeout(function () {
-                (popup.classList.toggle("hide"))
-            }, 1990);
-
-            console.log("Not in word list.");
-
-        }
-
-    }
+    keyboardCheck(keynum);
 
 });
 
@@ -179,6 +163,7 @@ function checkWord() {
             document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
                 getElementsByTagName("th")[i].style.backgroundColor = "green";
             map2.set(your_char, map2.get(your_char) - 1);
+            getElementByTextContent(your_char).style.backgroundColor = "green";
             //console.log("ansCh: " + map2.get(your_char));
             //console.log("ansCh: " + map1.get(your_char));
         }
@@ -194,9 +179,13 @@ function checkWord() {
         if (your_char != ans_char && word.includes(your_char) && map2.get(your_char) > 0) {
 
             document.getElementsByTagName("table")[0].getElementsByTagName("tr")[indexRow].
-                getElementsByTagName("th")[i].style.backgroundColor = "yellow";
+                getElementsByTagName("th")[i].style.backgroundColor = "DarkOrange";
+            getElementByTextContent(your_char).style.backgroundColor = "DarkOrange";
             map2.set(your_char, map2.get(your_char) - 1);
             console.log(your_char + " map: " + map2.get(your_char));
+        } else if (!word.includes(your_char)) {
+            getElementByTextContent(your_char).style.backgroundColor = "gray"
+
         }
     }
     //console.log("user: " + user_answer);
@@ -217,7 +206,37 @@ function getFullWord() {
 
 }
 
+var modal;
+function modalForWin() {
+    gameEnd = true;
+    modal = document.getElementById("myModal");
+    document.getElementById("modal-text").innerText += "\nThe word was " + word + ".";
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
 
+}
+
+function modalForLoss() {
+    gameEnd = true;
+    modal = document.getElementById("myModal");
+    document.getElementById("modal-text").innerText = "You were unable to find the word.\n"
+        + "The word was " + word + ".";
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 
