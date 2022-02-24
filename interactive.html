@@ -126,12 +126,6 @@
 
     </div>
 
-    <script type="text/javascript">
-        document.addEventListener('click', function (e) {
-            if (document.activeElement.toString()
-                == '[object HTMLButtonElement]') { document.activeElement.blur(); }
-        });</script>
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
@@ -173,6 +167,7 @@
         font-size: 20pt;
         border-radius: 25px;
         border: 15px solid rgb(41, 41, 41);
+
     }
 
     th,
@@ -240,27 +235,27 @@
         height: fit-content; */
         border: 3px transparent green;
         padding: 0px;
-
+        height: 50%;
     }
 
     #keyboard {
         justify-content: center;
 
         /* align-items: flex-start; */
-        /* position: fixed;
+        position: fixed;
         bottom: 0;
         right: 0;
-        left: 0; */
-
-
+        left: 0;
+        width: 100%;
 
     }
 
     #keyboard button {
 
-        height: 60px;
+
         text-align: center;
-        width: 50px;
+        width: 80px;
+        height: 80px;
         font-family: 'Arial Bold', sans-serif;
         font-weight: 700;
         font-size: 15px;

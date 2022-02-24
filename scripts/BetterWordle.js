@@ -238,7 +238,3 @@ window.onclick = function (event) {
     }
 }
 
-
-
-
-
