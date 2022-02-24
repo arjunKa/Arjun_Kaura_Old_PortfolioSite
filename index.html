@@ -23,7 +23,7 @@
 <body>
 
 	<script src="scripts/cookieCode.js"></script>
-
+	<script src="scripts/dropdown.js"></script>
 	<script src="scripts/OnLoad.js"></script>
 
 	<div id="navi">
@@ -31,7 +31,19 @@
 		<ul>
 			<li><a href="#aboutMe">About Me</a></li>
 			<li><a href="#projects">Projects</a></li>
-			<li><a href="interactive.html">Interactive</a></li>
+			<li>
+				<div class="dropdown">
+					<button onclick="dropDownFunction()" class="dropbtn">
+						Interactive
+					</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="interactive.html">Custom Wordle</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+				</div>
+			</li>
+
 			<li class="right-navi"><button onclick="myFunction()" class="dark-mode-button"><span id="drkMode">Dark
 						Mode</span></button></li>
 			<!--	<li><a href="#contact">Contact</a></li> -->
