@@ -145,13 +145,6 @@ li {
   color: red;
 }
 
-#navi ul {
-}
-/* #navi li :last-of-type {
-  margin-right: auto;
-  color: yellow;
-} */
-
 #navi a {
   display: block;
 

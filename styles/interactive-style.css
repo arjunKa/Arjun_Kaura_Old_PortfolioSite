@@ -1,3 +1,197 @@
+body {
+  /* margin: 0; */
+
+  /* overflow: hidden; */
+  background-color: rgb(212, 212, 212);
+
+  padding: 0;
+  /* Prevent scrollbar appearing on page transition */
+  /* overflow-y: hidden; */
+
+  /*overflow: hidden;  Overflow set to hidden. Any elements outside of the window will not be shown */
+  height: 100%; /* Height set to 100% means the body will extend from the top of the window to the bottom */
+  max-height: 100%; /* Maximum height is limited to 100% */
+}
+
 table {
-  color: gray;
+  /* margin-top: -50px; */
+
+  color: rgb(233, 233, 233);
+  background-color: rgb(65, 65, 65);
+  font-size: 20pt;
+  border-radius: 25px;
+  border: 15px solid rgb(41, 41, 41);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th,
+tr {
+  padding: 30px;
+  margin: auto;
+}
+
+/* @keyframes example {
+      from {
+          background-color: gray;
+      }
+
+      to {
+          background-color: green;
+      }
+  } */
+
+th {
+  padding: 0px;
+  border: 5px solid black;
+  border-radius: 15px;
+  height: 50px;
+  width: 50px;
+  min-width: 20px;
+  min-height: 20px;
+  font-family: "Arial", sans-serif;
+  color: rgb(231, 231, 231);
+  font-weight: 600;
+  font-size: 28pt;
+  /* animation-name: example;
+      animation-duration: 2s; */
+}
+
+#wordle {
+  text-align: center;
+
+  background: #efefef;
+
+  padding-top: 50px;
+
+  /* margin: 0 auto;
+  margin-top: 30px;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+   */
+}
+
+#keyboard button {
+  width: 80px;
+  height: 80px;
+  font-family: "Arial Bold", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  font-size-adjust: inherit;
+  color: black;
+
+  /* font-size: 1vb; */
+
+  margin: 3px;
+  padding: 0px;
+}
+
+#para ul,
+li {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
+  color: #8f8f8f;
+  text-align: justify;
+}
+#navi a {
+  display: block;
+
+  width: 150px; /* fixed width */
+
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+#navi a:hover {
+  color: #b8b8b8;
+}
+#navi {
+  box-shadow: 0 8px 12px rgba(156, 156, 156, 0.7);
+
+  margin: 0px auto;
+  height: auto;
+  background-color: white;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+#navi li {
+  height: auto;
+
+  float: left;
+  display: inline;
+  width: fit-content;
+  vertical-align: middle;
+  margin-top: -10px;
+
+  border: 1px solid #c7c7c7;
+}
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #ffffff;
+  color: rgb(83, 83, 83);
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
 }
